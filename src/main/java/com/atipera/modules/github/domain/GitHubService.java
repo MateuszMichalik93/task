@@ -14,7 +14,7 @@ class GitHubService {
     private final GithubPort githubPort;
     WebClient webClient = WebClient.builder().build();
 
-    public List<GithubUserRepository> getGithubRepositories(String userName) throws UserNotFoundException {
+    List<GithubUserRepository> getGithubRepositories(String userName) throws UserNotFoundException {
 
         GithubUserRepository[] fetchedRepos = webClient.get()
             .uri(uriBuilder -> uriBuilder
